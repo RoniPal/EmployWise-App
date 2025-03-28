@@ -1,97 +1,81 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# EmployWise
 
-# Getting Started
+## Download Release APK Directly [EmployWise.apk]
+Drive Link : https://drive.google.com/file/d/1gy4MgQ71NvgguqituSYqJPcXp0tOoB7y/view?usp=drive_link
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+## Android Download 
+- After Download Release Apk install
+- Secrity Check Through the Play Protect
+- Click On Install Button
 
-## Step 1: Start Metro
+## Project Overview
+EmployWise is a React Native application designed to manage employees efficiently. It provides user authentication, listing functionalities, and user management features.
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+## Prerequisites
+Before running this project, ensure you have the following installed:
+- Node.js (LTS version recommended)
+- npm or yarn
+- React Native CLI (`npm install -g react-native-cli`)
+- Android Studio (for Android development)
+- Xcode (for iOS development - macOS only)
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+## Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-repo/employwise.git
+   cd employwise
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+   OR
+   ```bash
+   yarn install
+   ```
 
-```sh
-# Using npm
-npm start
+## Running the Application
+### On Android Emulator/Device
+1. Start Metro Bundler:
+   ```bash
+   npx react-native start
+   ```
+2. Open a new terminal and run:
+   ```bash
+   npx react-native run-android
+   ```
 
-# OR using Yarn
-yarn start
+### On iOS Emulator (Mac Only)
+1. Install CocoaPods dependencies:
+   ```bash
+   cd ios
+   pod install
+   cd ..
+   ```
+2. Run the app:
+   ```bash
+   npx react-native run-ios
+   ```
+
+## API Usage
+This app fetches user data from `https://reqres.in/api/users?page={page}` for testing purposes.
+
+## Key Features
+- **User Login:** Email and password authentication
+- **User Listing:** Fetch and display users from API
+- **Pagination:** Navigate between user lists
+- **User Management:** Edit and delete users
+- **Local Storage:** Uses AsyncStorage for session handling
+
+## Assumptions & Considerations
+- The app uses `reqres.in` as a placeholder API.
+- Authentication is simulated using a token stored in `AsyncStorage`.
+- Data does not persist beyond API constraints (mock API usage).
+
+## Building APK
+To generate an APK, run:
+```bash
+cd android
+./gradlew assembleRelease
 ```
-
-## Step 2: Build and run your app
-
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
-
-### Android
-
-```sh
-# Using npm
-npm run android
-
-# OR using Yarn
-yarn android
-```
-
-### iOS
-
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
-
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
-```sh
-bundle install
-```
-
-Then, and every time you update your native dependencies, run:
-
-```sh
-bundle exec pod install
-```
-
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
-
-```sh
-# Using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
-```
-
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
-
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
-
-## Step 3: Modify your app
-
-Now that you have successfully run the app, let's make changes!
-
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
-
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+The APK will be located at `android/app/build/outputs/apk/release/app-release.apk`.
